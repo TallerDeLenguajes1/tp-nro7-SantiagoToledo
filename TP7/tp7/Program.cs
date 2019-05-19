@@ -24,13 +24,14 @@ namespace tp7
 
         public Empleado()
         {
-            string[] Nombres = { "Rufus", "Bear", "Dakota", "Fido", "Vanya", "Samuel", "Koani", "Volodya", "Prince", "Yiska" };
+            string[] Nombres = { "Santiago", "Pedro", "Juan", "Luciano", "Martin", "Maria", "Carla", "Luciana", "Cristina", "Alejandra" };
 
             Random rnd = new Random();
+            
+            genero = Enum.GetName( Genero, rnd.Next(0, 1) );
             nombre = _nombre;
             apellido = _apellido;
-            fnac = _fnac;
-            genero = _genero;
+            fnac = DateTime(rnd.Next(1960, 2019), rnd.Next(1, 12), rnd.Next(1, 31));
             fing = _fing;
             sueldoBasico = _sueldoBasico;
             cargo = _cargo;
